@@ -14,12 +14,18 @@
     <title>Infinite Scroll</title>
   </head>
   <body>
-    <div class="loader" id="loader">
+    <div class="loader" id="loader" hidden>
       <img src="loader.svg" alt="Loading spinner" />
     </div>
 
     <main>
       <h1>UNSPLASH API - INFINITE SCROLL</h1>
+
+      <div class="image-container" id="image-container">
+        <img class="image" src="test.jpg" />
+        <img class="image" src="test.jpg" />
+        <img class="image" src="test.jpg" />
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

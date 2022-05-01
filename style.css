@@ -37,3 +37,38 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.image-container {
+  margin: 1rem 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.image:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Media query tablets */
+@media screen and (max-width: 100rem) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Media query tablets and smaller */
+@media screen and (max-width: 40rem) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+}
