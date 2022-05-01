@@ -56,12 +56,24 @@ h1 {
   transform: translateY(-0.5rem);
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 /* Media query tablets */
 @media screen and (max-width: 100rem) {
+  .image-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media query tablets */
+@media screen and (max-width: 70rem) {
   .image-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 /* Media query tablets and smaller */
 @media screen and (max-width: 40rem) {
   h1 {
