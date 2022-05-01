@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
-const numberOfPhotos = 30;
+let numberOfPhotosToLoad = 10;
 const apiKey = 'bMG1CIKpZ5xi_fKTbfS3BZDRQRBUVW38dF215uTIvD4';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${numberOfPhotos}&orientation=portrait`;
+let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${numberOfPhotosToLoad}&orientation=portrait`;
 let photos = [];
 let arePhotosLoaded = false;
 let imagesLoaded = 0;
@@ -20,6 +20,8 @@ const imageLoaded = () => {
     arePhotosLoaded = true;
 
     // Removes initial loading features
+    numberOfPhotosToLoad = 30;
+    apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${numberOfPhotosToLoad}&orientation=portrait`;
     loaderElem.hidden = true;
     document.body.classList.remove('disable-scroll');
   }
